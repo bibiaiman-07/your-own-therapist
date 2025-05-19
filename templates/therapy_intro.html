@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assessment Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Your Assessment Results</h2>
+        <ul>
+            {% for condition, score in scores.items() %}
+                <li><strong>{{ condition }}:</strong> {{ score }}</li>
+            {% endfor %}
+        </ul>
+        <a href="{{ url_for('start_session') }}" class="button">Start Therapy</a>
+    </div>
+</body>
+</html>

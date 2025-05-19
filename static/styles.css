@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    padding: 0;
+    background: #f4f7f8;
+    color: #333;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: #4A90E2;
+}
+
+.assessment-body .question {
+    background: #ffffff;
+    margin: 10px auto;
+    padding: 15px;
+    border-left: 6px solid #4A90E2;
+    width: 70%;
+    border-radius: 5px;
+}
+
+select {
+    margin-top: 5px;
+    padding: 5px;
+    width: 100%;
+}
+
+button, .btn {
+    background-color: #4A90E2;
+    color: white;
+    padding: 10px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    margin: 20px auto;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button:hover, .btn:hover {
+    background-color: #357ABD;
+}
+
+.top-disorder {
+    background-color: #fff3cd;
+    padding: 20px;
+    border-left: 6px solid #ffc107;
+    margin-bottom: 20px;
+    width: 70%;
+    margin: auto;
+    border-radius: 6px;
+}
+
+.all-scores {
+    background-color: #e2f0d9;
+    padding: 20px;
+    border-left: 6px solid #28a745;
+    width: 70%;
+    margin: auto;
+    border-radius: 6px;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f9ff;
+    padding: 20px;
+}
+
+h1, h3 {
+    color: #004d99;
+}
+
+textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #007acc;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}

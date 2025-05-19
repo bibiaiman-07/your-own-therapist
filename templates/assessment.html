@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mental Health Assessment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Mental Health Diagnostic Assessment</h2>
+        <form method="POST" action="{{ url_for('submit_assessment') }}">
+
+            {% for question in questions %}
+                <div class="question-block">
+                    <p><strong>{{ loop.index }}. {{ question }}</strong></p>
+                    <label><input type="radio" name="q{{ loop.index }}" value="0" required> Not at all</label>
+                    <label><input type="radio" name="q{{ loop.index }}" value="1"> Several days</label>
+                    <label><input type="radio" name="q{{ loop.index }}" value="2"> More than half the days</label>
+                    <label><input type="radio" name="q{{ loop.index }}" value="3"> Nearly every day</label>
+                </div>
+            {% endfor %}
+            <br>
+            <button type="submit" class="button">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+

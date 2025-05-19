@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Therapy Chat</title>
+    <style>
+      .chat-box {
+        border: 1px solid #ddd;
+        padding: 10px;
+        max-width: 500px;
+        margin-bottom: 20px;
+        height: 300px;
+        overflow-y: auto;
+      }
+      .bot-message {
+        color: blue;
+      }
+      .user-message {
+        color: green;
+        text-align: right;
+      }
+    </style>
+</head>
+<body>
+    <h2>
+      {% if current_session <= 5 %}
+        Session {{ current_session }} - Question {{ current_question + 1 }}
+      {% else %}
+        Therapy Completed
+      {% endif %}
+    </h2>
+    <div class="chat-box">
+        {% for chat in chat_history %}
+            <p class="{{ 'bot-message' if chat.sender == 'bot' else 'user-message' }}">
+              <strong>{{ chat.sender }}:</strong> {{ chat.text }}
+            </p>
+        {% endfor %}
+    </div>
+    {% if current_session <= 5 %}
+    <form method="post">
+        <input type="text" name="message" required autofocus />
+        <button type="submit">Send</button>
+    </form>
+    {% else %}
+    <p>Thank you for completing your therapy sessions!</p>
+    {% endif %}
+</body>
+</html>

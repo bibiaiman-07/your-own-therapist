@@ -1,0 +1,72 @@
+therapy_questions = {
+    "session_1": [
+        "How often do you find yourself feeling tired, even after a good night’s sleep?",
+        "What activities do you enjoy doing, and how often do you do them?",
+        "Do you ever feel nervous or uneasy in everyday situations?",
+        "Have your eating habits changed recently?",
+        "Do you ever feel overwhelmed by small tasks?",
+        "Can you easily talk to friends or family when you're feeling low?",
+        "Do you notice mood swings or changes in your energy levels?",
+        "How would you describe your current stress levels?",
+        "Are you able to maintain your appetite consistently?",
+        "Have you ever used food or substances (like alcohol) to cope with emotions?",
+        "How comfortable are you with the way your body looks?",
+        "Do you often replay negative thoughts in your mind?"
+    ],
+    "session_2": [
+        "Have you been avoiding people or situations lately? Why?",
+        "How do you typically respond to sudden stress or conflict?",
+        "Do you feel like you're able to control your emotions most of the time?",
+        "How often do you feel guilty after eating?",
+        "Do you find it hard to enjoy hobbies or passions you once loved?",
+        "Have you noticed changes in your sleep—sleeping too much or too little?",
+        "Are there times when you feel extremely high energy and confidence, followed by exhaustion or sadness?",
+        "Do you often feel like you're on edge, even when nothing is wrong?",
+        "How often do you experience cravings or urges you try to suppress?",
+        "Are you concerned with how much control you have over your eating or drinking?",
+        "Have you been in risky situations due to impulsive behavior?",
+        "What do you do when you're feeling lonely?"
+    ],
+    "session_3": [
+        "Have you ever felt like your emotions take over and you can't control them?",
+        "When you feel sad or anxious, what’s your coping mechanism?",
+        "Do you feel safe with your thoughts when you're alone?",
+        "Are you often critical of your appearance or weight?",
+        "Do you struggle with making everyday decisions?",
+        "Have you experienced sudden shifts in mood that impact your relationships?",
+        "Do you find it difficult to sit still or focus, even when trying?",
+        "How do you usually respond after an argument or conflict?",
+        "Have you ever consumed substances in secret or felt shame afterward?",
+        "How often do you restrict food even when you’re hungry?",
+        "Do you find yourself comparing your mental state with others?",
+        "Have you had moments where you felt completely hopeless or trapped?"
+    ],
+    "session_4": [
+        "Can you identify specific situations or people that trigger negative feelings?",
+        "Have you ever questioned your sense of reality or felt disconnected from yourself?",
+        "What is your relationship with control—controlling food, emotions, or others?",
+        "Do your moods feel out of sync with what's happening in your life?",
+        "Have you felt empty or numb for extended periods of time?",
+        "Do you hide parts of your mental health from friends or family? Why?",
+        "Have you ever harmed yourself or considered it?",
+        "How has your mental health affected your daily life (work, school, relationships)?",
+        "Do you ever feel like you're living on autopilot?",
+        "Are there past events that you feel are still influencing your mental health?",
+        "Have you lost trust in yourself or others?",
+        "Do you feel like you’re stuck in a cycle that’s hard to break?"
+    ],
+    "session_5": [
+        "What are the beliefs you hold about yourself, and how have they shaped you?",
+        "How do you define healing or recovery for yourself?",
+        "Can you recognize moments of strength in your struggles?",
+        "What would you say to your younger self who was struggling?",
+        "What does a “mentally healthy” version of you look like?",
+        "Do you forgive yourself for the difficult experiences you’ve gone through?",
+        "What has mental health taught you about your needs and boundaries?",
+        "How do you handle failure or disappointment now compared to before?",
+        "In what ways have you grown emotionally, even through pain?",
+        "How can you build a supportive routine for your mental health?",
+        "Are there people in your life you want to reconnect with or let go of?",
+        "What is one commitment you will make for your mental well-being going forward?"
+    ]
+}

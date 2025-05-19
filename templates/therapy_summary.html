@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Therapy Summary</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #2c3e50; }
+        .session-summary { margin-bottom: 20px; }
+        .mood-badge {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 12px;
+            color: white;
+            font-weight: bold;
+        }
+        /* Mood colors */
+        .happy { background-color: #2ecc71; }
+        .sad { background-color: #3498db; }
+        .neutral { background-color: #95a5a6; }
+        .angry { background-color: #e74c3c; }
+        .anxious { background-color: #f39c12; }
+    </style>
+</head>
+<body>
+    <h1>Your Therapy Summary</h1>
+
+    <img src="{{ url_for('static', filename='sentiment_trend.png') }}" alt="Sentiment Trend" width="700" />
+
+    <h2>Session Moods Overview</h2>
+    <ul>
+        {% for label, mood in zip(session_labels, avg_moods) %}
+            <li>
+                <strong>{{ label }}:</strong>
+                <span class="mood-badge {{ mood|lower }}">
+                    {{ mood.capitalize() }}
+                </span>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <h2>Detailed Responses</h2>
+    {% for session, answers in all_answers.items() %}
+        <div class="session-summary">
+            <h3>{{ session.replace('_', ' ').title() }}</h3>
+            <ul>
+                {% for ans in answers %}
+                    <li>
+                        <b>User:</b> {{ ans.reply }} <br/>
+                        <b>Mood:</b> <span class="mood-badge {{ ans.mood|lower }}">{{ ans.mood.capitalize() }}</span><br/>
+                        <b>Sentiment score:</b> {{ ans.sentiment.compound | round(2) }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+</body>
+</html>

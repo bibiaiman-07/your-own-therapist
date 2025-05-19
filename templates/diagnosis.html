@@ -1,0 +1,30 @@
+<!-- templates/diagnosis.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Diagnosis Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="diagnosis-body">
+    <h1>Your Mental Health Diagnosis</h1>
+
+    <div class="top-disorder">
+        <h2>Top Concern: {{ top_disorder }}</h2>
+        <p>{{ disorder_info[top_disorder] }}</p>
+    </div>
+
+    <div class="all-scores">
+        <h3>Score Breakdown:</h3>
+        <ul>
+        {% for disorder, score in scores.items() %}
+            <li>
+                <strong>{{ disorder }}</strong>: {{ score }} ({{ diagnosis[disorder] }})<br>
+                <em>{{ disorder_info[disorder] }}</em>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+
+    <a href="/start_therapy" class="btn">Start Therapy Sessions</a>
+</body>
+</html>

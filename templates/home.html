@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Welcome to Your Safe Space</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        /* Reset and base */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+            color: #1b1b3a;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            color: #073b4c;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+        }
+
+        p {
+            font-weight: 600;
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
+            color: #055160;
+            letter-spacing: 0.05em;
+        }
+
+        p strong {
+            color: #ef476f;
+            font-weight: 700;
+        }
+
+        .button {
+            background: #ef476f;
+            color: white;
+            font-weight: 700;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 6px 15px rgba(239, 71, 111, 0.6);
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .button:hover {
+            background: #d63956;
+            box-shadow: 0 8px 20px rgba(214, 57, 86, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <h1><strong>We Listen,</strong> We Don’t Judge</h1>
+    <p>Welcome to your <strong>safe space</strong> for <strong>healing</strong> and <strong>reflection.</strong></p>
+    <a class="button" href="{{ url_for('show_assessment') }}">Start Assessment</a>
+</body>
+</html>
