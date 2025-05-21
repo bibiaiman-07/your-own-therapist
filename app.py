@@ -147,13 +147,22 @@ def therapy_summary():
 
     session_labels = []
     avg_sentiments = []
+    avg_moods = []
 
     for session_key, answers in all_answers.items():
         session_labels.append(session_key.replace('_', ' ').title())
+        
+        # Sentiment processing
         sentiments = [ans['sentiment']['compound'] for ans in answers if ans.get('sentiment')]
-        avg = sum(sentiments) / len(sentiments) if sentiments else 0
-        avg_sentiments.append(avg)
+        avg_sentiment = sum(sentiments) / len(sentiments) if sentiments else 0
+        avg_sentiments.append(avg_sentiment)
 
+        # Mood processing
+        moods = [ans['mood'] for ans in answers if ans.get('mood')]
+        most_common_mood = max(set(moods), key=moods.count) if moods else "Neutral"
+        avg_moods.append(most_common_mood)
+
+    # Generate Sentiment Trend Chart
     plt.figure(figsize=(10, 5))
     plt.plot(session_labels, avg_sentiments, marker='o', linestyle='-', color='teal')
     plt.title("Average Sentiment Score per Session")
@@ -166,9 +175,18 @@ def therapy_summary():
     plt.savefig(chart_path)
     plt.close()
 
-    return render_template('therapy_summary.html',
-                           all_answers=all_answers,
-                           chart_path=chart_path)
+    return render_template(
+        'therapy_summary.html',
+        session_labels=session_labels,
+        avg_moods=avg_moods,
+        all_answers=all_answers,
+        chart_path=chart_path,
+        zip=zip  # This enables zip in Jinja2 template
+    )
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+
